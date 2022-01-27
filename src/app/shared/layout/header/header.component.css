@@ -1,0 +1,30 @@
+div{
+  margin: 10 10 10 10;
+}
+redes{
+  display: inline;
+  float: right;
+}
+
+.header{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.header-subtitle h1{
+  color: rgb(184, 178, 178);
+  font-family:serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+div div a i{
+  font-size: 20px;
+  margin: 5px;
+}
+
+div div a{
+  color: white;
+}

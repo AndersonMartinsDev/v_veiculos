@@ -1,0 +1,84 @@
+@import url("https://fonts.google.com/noto/specimen/Noto%20Serif");
+
+[nz-carousel-content] {
+  text-align: center;
+  max-height: fit-content;
+  line-height: 200px;
+  background: transparent;
+  color: black;
+  overflow: hidden;
+}
+
+.letreiro{
+  line-height: 10px;
+}
+
+h3 {
+  color: black;
+  margin-bottom: 0;
+  user-select: none;
+}
+
+.details-content{
+  margin: 22px;
+}
+
+p{
+  color: black;
+  font-stretch: normal;
+  line-height: normal;
+  font-family: 'Noto Serif';
+  line-height: 25px;
+  font-size: 17px;
+  background-color: rgba(235, 233, 233, 0.849);
+  padding: 15px;
+  border-radius: 20px;
+}
+.image-ancora{
+  max-height: fit-content;
+}
+
+.arrows{
+  color: black;
+  font-size: 20px;
+}
+.arrows :hover{
+  color: bisque;
+}
+
+nz-comment{
+  text-align: start;
+}
+
+.contacts{
+  width: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  font-size: 15px;
+  text-align: start;
+  align-items: center;
+  line-height: 40px;
+  background-color: rgba(235, 233, 233, 0.849);
+}
+
+.contacts a i{
+  font-size: 30px;
+  color: rgb(1, 185, 1);
+  padding-right: 5px;
+}
+.contacts a{
+  font-size: 18px;
+  color: rgb(136, 136, 136);
+  margin: 0px;
+  padding: 0px;
+}
+
+.contacts label{
+  color: rgb(136, 136, 136);
+  margin: 0px;
+  padding: 0px;
+}
+

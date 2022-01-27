@@ -1,0 +1,9 @@
+  nz-card{
+    border-radius: 15px;
+    background-color: rgb(243, 243, 243);
+    border-color: transparent;
+  }
+
+  .container-prd-card{
+    z-index: 99;
+  }
