@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server",
+    "start": "node server.js",
     "init": "ng serve -o",
     "build": "ng build --prod --build-optimizer=true --aot=true",
     "watch": "ng build --watch --configuration development",
