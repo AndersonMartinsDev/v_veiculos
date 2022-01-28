@@ -7,7 +7,8 @@
     "init": "ng serve -o",
     "build": "ng build --prod --build-optimizer=true --aot=true",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "postinstall": "ng build --aot --prod"
   },
   "engines": {
     "node": "12.0.0",

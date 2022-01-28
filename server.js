@@ -7,10 +7,10 @@
 
  const PORT = process.env.PORT || 8080 ;
 
- app.use(express.static(__dirname+'/dist/v_eiculos'));
+ app.use(express.static(__dirname+'/dist/vieira-veiculos'));
 
  app.get('/*',(req,res)=>{
-   res.sendFile(__dirname+'dist/v_veiculos/index.html')
+   res.sendFile(__dirname+'dist/vieira-veiculos/index.html')
  });
 
  app.listen(PORT,()=>{
