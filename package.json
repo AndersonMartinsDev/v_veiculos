@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "init": "ng serve -o",
+    "iniciar": "ng serve -o",
     "build": "ng build --prod --build-optimizer=true --aot=true",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

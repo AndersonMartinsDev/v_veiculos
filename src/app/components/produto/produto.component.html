@@ -1,15 +1,6 @@
-<!-- <div>
-  <nz-carousel nzAutoPlay>
-    <div nz-carousel-content *ngFor="let index of array">
-      <h3>{{ index }}</h3>
-    </div>
-  </nz-carousel>
-</div> -->
-
-<div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }" class="inner-products">
-  <h3 class="recomend-products">NOVIDADES</h3>
-  <nz-divider></nz-divider>
-  <div nz-col class="gutter-row" [nzSpan]="8" style="text-align: center; margin-bottom: 10px;"
+<br>
+<div nz-row [nzGutter]="16" class="inner-products">
+  <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="12" [nzLg]="8" [nzXl]="8" class="gutter-row" style="text-align: center; margin-bottom: 10px;"
     *ngFor="let item of products">
     <app-produto-cartao [description]='item.description' [image]='item.image' (detalhar)="navegate('teste')"></app-produto-cartao>
   </div>

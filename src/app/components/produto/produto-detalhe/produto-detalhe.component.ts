@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
-import { NzCarouselContentDirective, NzCarouselFlipStrategy, NzCarouselOpacityStrategy } from 'ng-zorro-antd/carousel';
+import { RedesSociais } from 'src/app/models/redes-sociais';
 
 @Component({
   selector: 'app-produto-detalhe',
@@ -7,6 +7,7 @@ import { NzCarouselContentDirective, NzCarouselFlipStrategy, NzCarouselOpacitySt
   styleUrls: ['./produto-detalhe.component.css']
 })
 export class ProdutoDetalheComponent implements OnInit {
+  rede = new RedesSociais();
 
   acessorios = [
     {icon:"instagram",descricao:"Ar condicionado"},
