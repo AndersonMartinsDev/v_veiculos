@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./produto-acessorios.component.css']
 })
 export class ProdutoAcessoriosComponent implements OnInit {
-  @Input() icone: string ="";
   @Input() descricao: string ="";
 
   constructor() { }

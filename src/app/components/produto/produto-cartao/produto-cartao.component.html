@@ -1,10 +1,9 @@
 <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="12" [nzLg]="16" [nzXl]="8">
-<nz-card [nzHoverable]="true" nzType="inner" (click)="detalhe()" [nzCover]="imagem" style="width:300px;padding: 5px;">
-    <nz-card-meta [nzTitle]="description"></nz-card-meta>
+<nz-card [nzHoverable]="true" nzType="inner" (click)="detalhe(veiculo.id)" [nzCover]="imagem" style="width:300px;padding: 5px;">
+    <nz-card-meta [nzTitle]="veiculo.nome"></nz-card-meta>
   </nz-card>
 </div>
 
 <ng-template #imagem>
-  <img nz-image width="280px" height="150px" [nzSrc]="image" alt="" nzDisablePreview style="border-radius: 10px;padding-left: 0px;"
-      (click)="detalhe()" />
+  <img nz-image width="280px" height="200px" [nzFallback]="fallback" alt="" style="border-radius: 10px;padding-left: 0px;"/>
 </ng-template>

@@ -15,8 +15,10 @@
 
 h3 {
   color: black;
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
   user-select: none;
+  line-height: 20px;
 }
 
 .details-content{

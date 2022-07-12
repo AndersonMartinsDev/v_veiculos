@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { RedesSociais } from 'src/app/models/redes-sociais';
+import { Anexo, VeiculoModel } from '../model/veiculo-model';
+import { VeiculoResumoModel } from '../model/veiculo-resumo';
 
 @Component({
   selector: 'app-produto-detalhe',
@@ -7,39 +10,35 @@ import { RedesSociais } from 'src/app/models/redes-sociais';
   styleUrls: ['./produto-detalhe.component.css']
 })
 export class ProdutoDetalheComponent implements OnInit {
+
+  entity: VeiculoModel = new VeiculoModel();
   rede = new RedesSociais();
+  arrayCarrousel:string[]=[]
+  texto:string='';
 
-  acessorios = [
-    {icon:"instagram",descricao:"Ar condicionado"},
-    {icon:"car",descricao:"Direção Hidraulica"},
-    {icon:"meh",descricao:"Motor 16v"},
-    {icon:"phone",descricao:"1.8"},
-    {icon:"node-index",descricao:"Aros de liga leve"},
-    {icon:"subnode",descricao:"Vidro elétrico"},
-    {icon:"instagram",descricao:"Ar condicionado"},
-    {icon:"car",descricao:"Direção Hidraulica"},
-    {icon:"meh",descricao:"Motor 16v"},
-    {icon:"phone",descricao:"1.8"},
-    {icon:"node-index",descricao:"Aros de liga leve"},
-    {icon:"subnode",descricao:"Vidro elétrico"},
-    {icon:"instagram",descricao:"Ar condicionado"},
-    {icon:"car",descricao:"Direção Hidraulica"},
-    {icon:"meh",descricao:"Motor 16v"},
-    {icon:"phone",descricao:"1.8"},
-    {icon:"node-index",descricao:"Aros de liga leve"},
-    {icon:"subnode",descricao:"Vidro elétrico"},
-  ];
-  arrayCarrousel = [
-    "https://garagem360.com.br/wp-content/uploads/2021/05/ee02aa57-61ff-46dd-89c0-ee2e33c35d10.jpg",
-    "https://allthecars.files.wordpress.com/2019/04/volkswagen-saveiro-2020-robust-01.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg2Ly1-LfEaYjzuLtTCiEGwRCiXC0zzTVUR_u9k0kp-_ZYEJEZRdgIiINYoWBIBaXfTns&usqp=CAU"
-  ]
-
-
-
-  constructor() { }
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.entity = this.route.snapshot.data['veiculo'];
+    if(this.entity){
+      this.toNzUploadFile(this.entity.imagens);
+      this.texto = '&text=Olá Nilson! Estou entrando em contato pois quero saber mais sobre o '+this.entity.nome;
+    }
+  }
+
+  toNzUploadFile(images: Anexo[]) {
+
+    images.forEach(image =>{
+      if(image){
+        const fileIt = new File(
+          [new Blob([`base64,${image.arquivo}`], { type: image.tipo })],
+          image.filename,
+          { type: image.tipo }
+        );
+        this.arrayCarrousel.push(`data:${fileIt.type};base64,${image.arquivo}`);
+      }
+    });
+
   }
 
 }

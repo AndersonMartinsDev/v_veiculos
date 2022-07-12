@@ -1,7 +1,16 @@
-<br>
-<div nz-row [nzGutter]="16" class="inner-products">
+<div style="margin-top: 10px;" *ngIf="veiculos.length > 0">
+  <nz-pagination [nzPageIndex]="pageIndex" nzPageSize="10" (nzPageIndexChange)="onChangePageIndex($event)" [nzTotal]="totalElementos"></nz-pagination>
+</div>
+<div nz-row [nzGutter]="16" class="inner-products" *ngIf="veiculos.length > 0;else empty">
   <div nz-col [nzXs]="24" [nzSm]="12" [nzMd]="12" [nzLg]="8" [nzXl]="8" class="gutter-row" style="text-align: center; margin-bottom: 10px;"
-    *ngFor="let item of products">
-    <app-produto-cartao [description]='item.description' [image]='item.image' (detalhar)="navegate('teste')"></app-produto-cartao>
+    *ngFor="let item of veiculos">
+    <app-produto-cartao [veiculo]='item' (detalhar)="navegate($event)"></app-produto-cartao>
   </div>
 </div>
+
+<ng-template #empty let-name>
+  <div style="text-align: center;color: black;">
+    <i nz-icon nzType="car" style="font-size: 20px;"></i>
+    <p>Estou procurando os melhores carros para melhor atendê-lo!</p>
+  </div>
+</ng-template>

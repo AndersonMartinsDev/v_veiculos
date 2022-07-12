@@ -12,6 +12,9 @@ import { NzDescriptionsModule } from 'ng-zorro-antd/descriptions';
 import { NzCommentModule } from 'ng-zorro-antd/comment';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzTagModule } from 'ng-zorro-antd/tag';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination'
 
 const NGZORROMODULES = [
   NzLayoutModule,
@@ -25,7 +28,10 @@ const NGZORROMODULES = [
   NzDescriptionsModule,
   NzCommentModule,
   NzListModule,
-  NzBreadCrumbModule
+  NzBreadCrumbModule,
+  NzUploadModule,
+  NzTagModule,
+  NzPaginationModule
 ]
 
 @NgModule({
