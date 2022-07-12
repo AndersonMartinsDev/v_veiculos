@@ -1,5 +1,4 @@
-//export const api:string = "https://apivieiraveiculos.herokuapp.com";
-export const api:string = "http://localhost:8080";
+export const api:string = "https://apivieiraveiculos.herokuapp.com";
 
 export const defaultHeaders ={
     'content-type':'application/json',
